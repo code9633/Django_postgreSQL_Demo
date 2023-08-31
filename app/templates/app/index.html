@@ -1,0 +1,30 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+    <div class="row m-5">
+        {% for product in products %}
+        <div class = "col"></div>
+        <div class="card" style = "width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">${{product.price}}</p>
+                <a href="./checkout" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+    <!-- <h1>Products</h1>
+    <ul>
+        <!- In Html represent the static data and we want
+        add the Dynamicaly change the data from python  
+    this is the way of add the dat to the static html page  -->
+        <!-- {% for product in products %} 
+            <li>{{product.name}} - {{product.price}}</li>
+        {% endfor %}
+    </ul> --> 
+
+{% endblock %}
+    
