@@ -2,11 +2,16 @@
 
 {% block content %}
 
+    <!-- {{form.as_p}} represent the template the tag render form fields to as paragraph-->
+
     <form action="" method="POST">
         {% csrf_token %}
-        {{form.as_p}} <!-- form.as_p represent the template the tag render form fields to as paragraph-->
+        {{form.as_p}}
         <input type="submit" value="Submit">
     </form> 
+
+
+
 
     <!-- <form action="" method="POST" id="myForm" class="needs-validation" novalidate>
         {% csrf_token %}
