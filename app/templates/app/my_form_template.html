@@ -1,0 +1,36 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}} <!-- form.as_p represent the template the tag render form fields to as paragraph-->
+        <input type="submit" value="Submit">
+    </form> 
+
+    <!-- <form action="" method="POST" id="myForm" class="needs-validation" novalidate>
+        {% csrf_token %}
+        <div class="mb-3">
+            {{ form.as_p }}
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Apply Bootstrap form validation styles
+            $('#myForm').addClass('was-validated');
+
+            // Add Bootstrap classes to form fields
+            $('#myForm input[type="text"], #myForm input[type="email"]').addClass('form-control');
+
+            // Add Bootstrap class to submit button
+            $('#myForm button[type="submit"]').addClass('btn btn-primary');
+
+            // You can add more interactions or customizations here
+        });
+    </script> -->
+
+{% endblock %}

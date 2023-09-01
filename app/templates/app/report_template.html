@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Field1</th>
+            <th>Field2</th>
+            <th>Field3</th>
+        </tr>
+        {% for item in data %}       
+            <tr>
+                <td>{{item.field1}}</td>
+                <td>{{item.field2}}</td>
+                <td>{{item.field3}}</td>
+            </tr>
+        {% endfor %}
+</table>
+</body>
+</html>
